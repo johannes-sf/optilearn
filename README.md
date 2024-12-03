@@ -44,7 +44,7 @@ pyenv install 3.10.8
 
 ```bash
 cd existing_repo
-git remote add origin https://gitlab.com/spryfox/optilearn/multi-objective-optimization.git
+git remote add origin https://github.com/spryfox-analytics/optilearn.git
 git branch -M main
 git push -uf origin main
 ```
