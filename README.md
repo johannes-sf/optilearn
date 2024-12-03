@@ -1,4 +1,4 @@
-# MooClassification
+# Optilearn
 
 ## Project Description
 OptiLearn, a collaboration between [Spryfox](https://spryfox.de/) and the Technical University of Darmstadt, is publicly funded by the LOEWE3 program. This cutting-edge machine learning framework leverages Multi-Objective Optimization (MOO) to enable agents to optimize conflicting objectives based on user-defined preferences. Unlike traditional ML systems that require retraining for behavioral shifts, OptiLearn ensures seamless adaptability, dynamically adjusting behavior within set parameters. The framework supports diverse outputs like classifications, detections, and data-specific confidence metrics, offering a comprehensive and versatile solution to evolving machine learning challenges.
