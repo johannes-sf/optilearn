@@ -1,0 +1,73 @@
+# Tags added to the run on the tracking server
+tag:
+
+# Evaluation frequency in terms of number of steps or iterations after which evaluation should occur.
+eval_freq: 1
+
+# Random seed for reproducibility; ensures consistent results on repeated runs.
+seed: 0
+
+# Toggle to enable GPU acceleration if available; may improve performance for large models.
+use_gpu_acceleration: true
+
+# Enable logging for recording experiment metrics and other information.
+log: true
+
+# Flag to control logging of the model structure; useful for model debugging.
+log_model: false
+
+# Name of the experiment or test run; used for identification in logs and results.
+name: test
+
+# Number of training iterations or episodes to run.
+iterations: 1
+
+# File name of the model configuration; specifies hyperparameters and architecture for the model.
+model_config_file_name: lgbm_config.yml
+
+# File name of the environment configuration; contains settings for the environment or dataset (e.g., churn prediction).
+env_config_file_name: churn_prediction.yml
+
+# ===== Agent Settings =====
+
+# Number of training steps that the agent should undergo.
+training_steps: 2
+
+# Number of parallel environments to run; may speed up training by processing multiple episodes simultaneously.
+n_envs: 1
+
+# ===== Multi-Objective Optimization (MOO) Parameters =====
+
+# Enable or disable Multi-Objective Optimization (MOO) during training.
+moo: false
+
+# Number of preferences to evaluate during the evaluation phase for MOO.
+n_prefs_eval: 2
+
+# Number of preferences to sample during the training phase for MOO.
+n_prefs_train: 2 # 8 * batch_size for larger-scale training
+
+# ===== Agent Configuration =====
+agent_config:
+
+  # Loss function to be used by the agent for training:
+  # Options include:
+  # - cross_entropy: standard cross-entropy loss for classification.
+  # - weighted_cross_entropy: applies weights to classes in cross-entropy for imbalanced data.
+  # - naive_cost: custom loss function.
+  # - binary_precision_recall: adjusts precision-recall balance.
+  loss_type: cross_entropy
+
+  model_config:
+
+  # ===== Multi-Objective Optimization (MOO) Parameters =====
+
+  # Utility function for MOO; options could include linear, exponential, or other functions.
+  u_func: linear
+
+  # Alpha sampling parameter for preferences; determines how preferences are weighted.
+  sample_alpha: 1.0
+
+  # Range of preference values used for MOO.
+  pref_range: 1
+

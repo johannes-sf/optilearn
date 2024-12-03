@@ -1,0 +1,21 @@
+name: classification
+training_data_loader: simple
+eval_data_loader: simple
+
+dim_out: 2 # Must match class_subset
+n_obj: 2
+dim_state: 3
+
+img_input: true
+critical_classes: [ 1 ]
+
+data_loader_config:
+  shuffle: true
+  batch_size: 256
+  contamination:
+  min_mixture_ratio: 0.2
+  label_type: one_hot
+  class_subset: [ 1, 2 ]
+  img_size: [ 28, 28 ]
+  training_data_path: /MNIST/train
+  eval_data_path: /MNIST/test

@@ -1,0 +1,14 @@
+/.idea
+*__pycache__
+*.neptune/
+*.pytest_cache/
+*dist/
+.venv/
+
+*log.txt
+*.pyc
+
+model_registry
+
+*.lprof
+.vscode/

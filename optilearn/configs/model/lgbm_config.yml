@@ -1,0 +1,7 @@
+model_type: lgbm
+torch_interface: false
+params:
+  n_jobs: -1
+  verbose: -1
+  early_stopping_round:
+  max_depth: 5

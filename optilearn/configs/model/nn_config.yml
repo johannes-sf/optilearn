@@ -1,0 +1,45 @@
+# This could be overwritten on the fly to match
+# the size of env.state.shape[-2:]
+model_type: nn
+torch_interface: true
+
+lr: 0.001
+grad_max_norm: 1.0
+
+feature_extractor:
+  pretrained_block: false
+  pretrained_model_name: resnet18
+  fine_tune: false
+
+  # If pretrained_block = true, cnn will be ignored
+  cnn:
+    0:
+      act: lrelu
+      batch_norm: true
+      bias: false
+      block: basic_cnn
+      kernel: 3
+      padding: 1
+      pooling: 1
+      size: 3
+      stride: 2
+    1:
+      act: lrelu
+      batch_norm: true
+      bias: false
+      block: basic_cnn
+      kernel: 3
+      padding: 1
+      pooling: 1
+      size: 3
+      stride: 2
+
+mlp:
+  attention_head: False
+  mlp:
+    0:
+      act: lrelu
+      size: 512
+    1:
+      act: lrelu
+      size: 120

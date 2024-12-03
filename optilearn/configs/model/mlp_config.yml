@@ -1,0 +1,14 @@
+# This could be overwritten on the fly to match
+# the size of env.state.shape[-2:]
+model_type: mlp
+torch_interface: true
+
+mlp:
+  attention_head: False
+  mlp:
+    1:
+      act: lrelu
+      size: 256
+    0:
+      act: lrelu
+      size: 256

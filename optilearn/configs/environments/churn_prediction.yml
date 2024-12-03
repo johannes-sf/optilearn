@@ -1,0 +1,34 @@
+name: tabular_classification
+training_data_loader: tabular
+eval_data_loader: tabular
+
+dim_out: 2
+n_obj: 0
+dim_state: 1
+
+index_column: PetId
+label_column: Churn
+
+label_type: one_hot
+
+data_loader_config:
+  training_data_path: /churn-prediction-training.csv
+  eval_data_path: /churn-prediction-test.csv
+
+  # Set eval_transformation_pipeline to none if the same instance of
+  # training_transformation_pipeline is to be used for eval e.g.,
+  # when a one hot encoder is to be fitted the resulting columns could
+  # be different on training and test data, provided no stratification
+  # of features is done. In such scenarios, the same instance of
+  # the transformation pipeline must be used for training and evaluation.
+  training_transformation_pipeline: default
+  eval_transformation_pipeline:
+
+  index_column: PetId
+  label_column: Churn
+  label_type: normal
+  batch_size:
+  nrows:
+  # for out-of-memory processing of data, vaex is used instead of pandas.
+  # corresponding changes required
+  oom: false
