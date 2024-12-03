@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "moo_classification"
+name = "optilearn"
 version = "0.22.0"
 description = ""
 authors = ["Eike Mentzendorff <eike.mentzendorff@spryfox.de>", "Sarosh Manzoor <sarosh.manzoor@spryfox.de>"]
 readme = "README.md"
-packages = [{ include = "moo_classification" }]
+packages = [{ include = "optilearn" }]
 
 [tool.poetry.dependencies]
 python = "3.10.8"
