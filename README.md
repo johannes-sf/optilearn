@@ -3,7 +3,7 @@
 ## Project Description
 OptiLearn, a collaboration between [Spryfox](https://spryfox.de/) and the Technical University of Darmstadt, is publicly funded by the LOEWE3 program. This cutting-edge machine learning framework leverages Multi-Objective Optimization (MOO) to enable agents to optimize conflicting objectives based on user-defined preferences. Unlike traditional ML systems that require retraining for behavioral shifts, OptiLearn ensures seamless adaptability, dynamically adjusting behavior within set parameters. The framework supports diverse outputs like classifications, detections, and data-specific confidence metrics, offering a comprehensive and versatile solution to evolving machine learning challenges.
 
-MooClassification is a Python package for multi-objective classification tasks. It provides a flexible framework for defining and running experiments with various models, data loaders, and evaluation metrics.
+Optilearn is a Python package for multi-objective classification tasks. It provides a flexible framework for defining and running experiments with various models, data loaders, and evaluation metrics.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
@@ -86,7 +86,7 @@ For more examples and tutorials, refer to the [Examples and Tutorials](docs/exam
 ## Project Structure
 The project is organized as follows:
 
-- `moo_classification/`: Main package containing all the core modules.
+- `optilearn/`: Main package containing all the core modules.
   - `agent.py`: Contains the `Agent` class.
   - `base_object.py`: Contains base classes like `BaseDataClass` and `BaseObject`.
   - `environments/`: Contains environment-related classes and data loaders.
